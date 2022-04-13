@@ -88,7 +88,7 @@ parse_config([labels|Rest], Config) ->
     parse_config(Rest, Config#config{labels = binary});
 parse_config([{return_maps, Val}|Rest], Config)
         when Val == true; Val == false ->
-    parse_config(Rest, Config#config{return_maps = true});
+    parse_config(Rest, Config#config{return_maps = Val});
 parse_config([return_maps|Rest], Config) ->
     parse_config(Rest, Config#config{return_maps = true});
 parse_config([{K, _}|Rest] = Options, Config) ->

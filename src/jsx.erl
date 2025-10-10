@@ -79,7 +79,7 @@ encode(Source, Config) -> jsx_to_json:to_json(Source, Config).
 
 decode(Source) -> decode(Source, []).
 
--spec decode(Source::json_text(), Config::jsx_to_term:config()) -> json_term() | {incomplete, decoder()}.
+-spec decode(Source::json_text(), Config::jsx_to_term:config()) -> json_term() | {incomplete, decoder()} | {with_tail, json_term(), binary()}.
 
 decode(Source, Config) -> jsx_to_term:to_term(Source, Config).
 

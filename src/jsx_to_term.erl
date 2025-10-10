@@ -68,7 +68,7 @@
 -endif.
 
 
--spec to_term(Source::binary(), Config::config()) -> json_value().
+-spec to_term(Source::binary(), Config::config()) -> json_value() | {with_tail, json_value(), binary()}.
 
 -ifdef(maps_always).
 to_term(Source, Config) when is_list(Config) ->
